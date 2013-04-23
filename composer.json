@@ -1,0 +1,7 @@
+{
+    "name": "chanmix51/response_manager",
+    "description": "A controller response manager for the Silex µ-framework.",
+    "license": "MIT",
+    "authors": [{ "name": "Grégoire HUBERT", "email": "hubert.greg@gmail.com" }],
+    "autoload": { "PSR-0": { "ResponseManager": "src" } }
+}

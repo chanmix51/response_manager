@@ -14,6 +14,7 @@ class ControllerResponseServiceProvider implements ServiceProviderInterface
             return $response_builder
                 ->addBuilder('string', function($string, $vars) { return new StringControllerResponse($string, $vars); })
                 ->addBuilder('twig', function($file, $vars) use ($app) { return new TwigControllerResponse($app['twig'], $file, $vars); })
+                ->addBuilder('csv', function($headers, $data) { return new CSVControllerResponse($headers, $data); })
                 ;
         });
 

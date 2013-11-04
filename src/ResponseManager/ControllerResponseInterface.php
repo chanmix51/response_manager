@@ -6,8 +6,7 @@ interface ControllerResponseInterface
     /**
      * createResponseFrom
      *
-     * Returns a text response from a controller response.
-     * @param ControllerReponse $response
+     * Returns a text response.
      * @return String
      */
     public function createResponse();

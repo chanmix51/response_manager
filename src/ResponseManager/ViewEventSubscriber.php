@@ -17,8 +17,9 @@ class ViewEventSubscriber implements EventSubscriberInterface
         {
             $options = $result->getOptions();
             $http_code = isset($options['http_code']) ? $options['http_code'] : 200;
+            $headers = isset($options['headers']) ? $options['headers'] : array();
 
-            $event->setResponse(new Response($result->createResponse(), $http_code));
+            $event->setResponse(new Response($result->createResponse(), $http_code, $headers));
         }
     }
 
